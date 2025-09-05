@@ -35,6 +35,16 @@ class Group {
   int groupBBlueWidth;
   int groupBBlueHeight;
 
+  //Group D White boxes variables
+  int groupDPosX;
+  int groupDPosY;
+  int groupDWidth;
+  int groupDHeight;
+  //Group D Blue boxes variables
+  int groupDBluePosX;
+  int groupDBluePosY;
+  int groupDBlueWidth;
+  int groupDBlueHeight;
 
 
 
@@ -73,6 +83,19 @@ class Group {
     groupBBluePosY = tempgroupY;
     groupBBlueWidth = 20;
     groupBBlueHeight = 40;
+
+    //Group D White boxes variables
+    groupDPosX = tempgroupX;
+    groupDPosY = tempgroupY;
+    groupDWidth = 465;
+    groupDHeight = 40;
+    //Group D Blue boxes variables
+    groupDBluePosX = 975;
+    groupDBluePosY = tempgroupY;
+    groupDBlueWidth = 20;
+    groupDBlueHeight = 40;
+    
+    
   }
 
 
@@ -127,7 +150,27 @@ class Group {
   //Display method for group B blue boxes
   void displayGroupBBlueBox() {
     //Draws the blue boxes
-    fill(0, 255, 255);
+    fill(255, 255, 0);
     rect(groupBBluePosX, groupBBluePosY, groupBBlueWidth, groupBBlueHeight);
   }
+
+
+  //Group D methods
+
+  //Display method for group D white boxes
+  void displayGroupDWhiteBox() {
+    //Draws the white boxes
+    fill(255);
+    rect(groupDPosX, groupDPosY, groupDWidth, groupDHeight);
+  }
+  
+  
+    //Display method for group D blue boxes
+  void displayGroupDBlueBox() {
+    //Draws the blue boxes
+    fill(255, 255, 0);
+    rect(groupDBluePosX, groupDBluePosY, groupDBlueWidth, groupDBlueHeight);
+  }
+  
+  
 }

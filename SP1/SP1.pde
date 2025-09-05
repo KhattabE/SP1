@@ -10,6 +10,9 @@ Group[] groupCBlueBox = new Group[4];
 //Group B array
 Group[] groupBWhiteBox = new Group[4];
 Group[] groupBBlueBox = new Group[4];
+//Group D array
+Group[] groupDWhiteBox = new Group[4];
+Group[] groupDBlueBox = new Group[4];
 
 
 //Variables for creating offset/space between the boxes of groupA
@@ -27,12 +30,19 @@ int startYB = 300;
 int boxHeightB = 40;
 int spacingB = 8;
 
+//Variables for creating offset/space between the boxes of groupD
+int startYD = 300;
+int boxHeightD = 40;
+int spacingD = 8;
+
+
 
 
 //Fonts
 PFont groupAText;
 PFont groupCText;
 PFont groupBText;
+PFont groupDText;
 
 
 
@@ -51,6 +61,9 @@ void setup() {
 
   //Method calling groupBForLoopIndexStoring()
   groupBForLoopIndexStoring();
+
+  //Method calling groupDForLoopIndexStoring()
+  groupDForLoopIndexStoring();
 }
 
 
@@ -80,6 +93,9 @@ void draw() {
 
   //Method calling displayGroupBBoxes()
   displayGroupBBoxes();
+
+  //Method calling displayGroupDBoxes
+  displayGroupDBoxes();
 }
 
 
@@ -89,6 +105,7 @@ void fontCreation() {
   groupAText = createFont("Arial", 16, true);
   groupCText = createFont("Arial", 16, true);
   groupBText = createFont("Arial", 16, true);
+  groupDText = createFont("Arial", 16, true);
 }
 
 
@@ -98,19 +115,22 @@ void displayText() {
   //Group A
   textFont(groupAText, 25);
   fill(0, 255, 255);
-  stroke(0, 255, 255);
   text("GROUP A", 175, 30);
 
   //Group C
   textFont(groupCText, 25);
   fill(0, 255, 255);
-  stroke(0, 255, 255);
   text("GROUP C", 675, 30);
 
   //Group B
   textFont(groupBText, 25);
   fill(255, 255, 0);
   text("GROUP B", 175, 295);
+
+  //Group D
+  textFont(groupDText, 25);
+  fill(255, 255, 0);
+  text("GROUP D", 675, 295);
 }
 
 
@@ -196,3 +216,20 @@ void displayGroupBBoxes() {
 
 
 //Methods for Group D boxes Storing and displaying
+
+//Method to fill group D white and blue boxes in the array in every index of the array size
+void groupDForLoopIndexStoring() {
+  for (int i = 0; i < groupDWhiteBox.length; i++) {
+    int y = startYD + i * (boxHeightD + spacingD);
+    groupDWhiteBox[i] = new Group(510, y);
+    groupDBlueBox[i] = new Group(975, y);
+  }
+}
+
+//Method that contains the code to displaying the group D blue and white boxes
+void displayGroupDBoxes() {
+  for (int i = 0; i < groupDWhiteBox.length; i++) {
+    groupDWhiteBox[i].displayGroupDWhiteBox();
+    groupDBlueBox[i].displayGroupDBlueBox();
+  }
+}

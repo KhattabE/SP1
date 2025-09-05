@@ -121,24 +121,24 @@ void fontCreation() {
 //Method that contains the code for displaying text
 void displayText() {
   //Group A
-  textFont(groupAText, 50);
+  textFont(groupAText, 70);
   fill(0, 255, 255);
-  text("GROUP A", 350, 60);
+  text("GROUP A", 325, 60);
 
   //Group C
-  textFont(groupCText, 50);
+  textFont(groupCText, 70);
   fill(0, 255, 255);
-  text("GROUP C", 1350, 60);
+  text("GROUP C", 1325, 60);
 
   //Group B
-  textFont(groupBText, 50);
+  textFont(groupBText, 70);
   fill(255, 255, 0);
-  text("GROUP B", 350, 590);
+  text("GROUP B", 325, 590);
 
   //Group D
-  textFont(groupDText, 50);
+  textFont(groupDText, 70);
   fill(255, 255, 0);
-  text("GROUP D", 1350, 590);
+  text("GROUP D", 1325, 590);
 }
 
 
@@ -248,9 +248,9 @@ void displayGroupDBoxes() {
 //Method to store the flags in the array groupAFlags
 void storeFlagAInArray() {
   PImage russiaImage = loadImage("Russia.png");
-  groupAFlags[0] = new Country(russiaImage, 0, 42, 80, 38);
+  groupAFlags[0] = new Country(russiaImage, 0, 80, 200, 80);
   PImage saudiImage = loadImage("SaudiArabia.png");
-  groupAFlags[1] = new Country(saudiImage, 0, 89, 80, 39);
+  groupAFlags[1] = new Country(saudiImage, 0, 175, 200, 85);
   
 }
 

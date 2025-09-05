@@ -9,6 +9,7 @@ Group[] groupCWhiteBox = new Group[4];
 Group[] groupCBlueBox = new Group[4];
 //Group B array
 Group[] groupBWhiteBox = new Group[4];
+Group[] groupBBlueBox = new Group[4];
 
 
 //Variables for creating offset/space between the boxes of groupA
@@ -30,6 +31,7 @@ int spacingB = 8;
 
 //Fonts
 PFont groupAText;
+PFont groupCText;
 PFont groupBText;
 
 
@@ -75,7 +77,7 @@ void draw() {
 
   //Method calling displayGroupCBoxes()
   displayGroupCBoxes();
-  
+
   //Method calling displayGroupBBoxes()
   displayGroupBBoxes();
 }
@@ -85,6 +87,7 @@ void draw() {
 //Method that contains the creatiion of fonts
 void fontCreation() {
   groupAText = createFont("Arial", 16, true);
+  groupCText = createFont("Arial", 16, true);
   groupBText = createFont("Arial", 16, true);
 }
 
@@ -98,11 +101,16 @@ void displayText() {
   stroke(0, 255, 255);
   text("GROUP A", 175, 30);
 
-  //Group B
-  textFont(groupBText, 25);
+  //Group C
+  textFont(groupCText, 25);
   fill(0, 255, 255);
   stroke(0, 255, 255);
   text("GROUP C", 675, 30);
+
+  //Group B
+  textFont(groupBText, 25);
+  fill(255, 255, 0);
+  text("GROUP B", 175, 295);
 }
 
 
@@ -173,6 +181,7 @@ void groupBForLoopIndexStoring() {
   for (int i = 0; i < groupBWhiteBox.length; i++) {
     int y = startYB + i * (boxHeightB + spacingB);
     groupBWhiteBox[i] = new Group(0, y);
+    groupBBlueBox[i] = new Group(465, y);
   }
 }
 
@@ -180,5 +189,10 @@ void groupBForLoopIndexStoring() {
 void displayGroupBBoxes() {
   for (int i = 0; i < groupBWhiteBox.length; i++) {
     groupBWhiteBox[i].displayGroupBWhiteBox();
+    groupBBlueBox[i].displayGroupBBlueBox();
   }
 }
+
+
+
+//Methods for Group D boxes Storing and displaying

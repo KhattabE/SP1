@@ -65,7 +65,7 @@ class Group {
     //Gorup C white boxes
     groupCPosX = tempgroupX;
     groupAPosY = tempgroupY;
-    groupAWidth = 930;
+    groupAWidth = 950;
     groupAHeight = 80;
     //Group C blue boxes
     groupCBluePosX = 1950;
@@ -87,7 +87,7 @@ class Group {
     //Group D White boxes variables
     groupDPosX = tempgroupX;
     groupDPosY = tempgroupY;
-    groupDWidth = 930;
+    groupDWidth = 950;
     groupDHeight = 80;
     //Group D Blue boxes variables
     groupDBluePosX = 1950;

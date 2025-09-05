@@ -8,17 +8,23 @@ Group[] groupABlueBox = new Group[4];
 Group[] groupCWhiteBox = new Group[4];
 Group[] groupCBlueBox = new Group[4];
 //Group B array
-
+Group[] groupBWhiteBox = new Group[4];
 
 
 //Variables for creating offset/space between the boxes of groupA
 int startY = 40;
-int boxHeight = 4;
-int spacing =  startY + boxHeight;
-////Variables for creating offset/space between the boxes of groupC
+int boxHeight = 40;
+int spacing = 8;
+
+//Variables for creating offset/space between the boxes of groupC
 int startYC = 40;
-int boxHeightC = 4;
-int spacingC =  startYC + boxHeightC;
+int boxHeightC = 40;
+int spacingC = 8;
+
+//Variables for creating offset/space between the boxes of groupB
+int startYB = 300;
+int boxHeightB = 40;
+int spacingB = 8;
 
 
 
@@ -40,6 +46,9 @@ void setup() {
 
   //Method calling groupCForLoopIndexStoring()
   groupCForLoopIndexStoring();
+
+  //Method calling groupBForLoopIndexStoring()
+  groupBForLoopIndexStoring();
 }
 
 
@@ -66,6 +75,9 @@ void draw() {
 
   //Method calling displayGroupCBoxes()
   displayGroupCBoxes();
+  
+  //Method calling displayGroupBBoxes()
+  displayGroupBBoxes();
 }
 
 
@@ -90,7 +102,7 @@ void displayText() {
   textFont(groupBText, 25);
   fill(0, 255, 255);
   stroke(0, 255, 255);
-  text("GROUP B", 675, 30);
+  text("GROUP C", 675, 30);
 }
 
 
@@ -106,6 +118,7 @@ void drawMiddleLine() {
 }
 
 
+//Methods for Group A boxes Storing and displaying
 
 //Method to fill group A white and blue boxes in the array in every index of the array size
 void groupAForLoopIndexStoring() {
@@ -118,8 +131,6 @@ void groupAForLoopIndexStoring() {
 }
 
 
-
-
 //Method that contains the code to displaying the group A blue and white boxes
 void displayGroupABoxes() {
   for (int i = 0; i < groupABox.length; i++) {
@@ -128,6 +139,10 @@ void displayGroupABoxes() {
   }
 }
 
+
+
+
+//Methods for Group C boxes Storing and displaying
 
 //Method to fill Group C white and blue boxes in the array in every index of the array size
 void groupCForLoopIndexStoring() {
@@ -146,5 +161,24 @@ void displayGroupCBoxes() {
   for (int i = 0; i < groupCWhiteBox.length; i++) {
     groupCWhiteBox[i].displayGroupCWhiteBox();
     groupCBlueBox[i].displaygroupCBlueBox();
+  }
+}
+
+
+
+//Methods for Group B boxes Storing and displaying
+
+//Method to fill group B white and blue boxes in the array in every index of the array size
+void groupBForLoopIndexStoring() {
+  for (int i = 0; i < groupBWhiteBox.length; i++) {
+    int y = startYB + i * (boxHeightB + spacingB);
+    groupBWhiteBox[i] = new Group(0, y);
+  }
+}
+
+//Method that contains the code to displaying the group B blue and white boxes
+void displayGroupBBoxes() {
+  for (int i = 0; i < groupBWhiteBox.length; i++) {
+    groupBWhiteBox[i].displayGroupBWhiteBox();
   }
 }

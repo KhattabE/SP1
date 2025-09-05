@@ -23,14 +23,17 @@ class Group {
   int groupCBluePosY;
   int groupCBlueWidth;
   int groupCBlueHeight;
-  
-  //Group B White boxes variable 
-  
-  
-  
-  //Group B Blue boxes variables 
-  
-  
+
+  //Group B White boxes variable
+  int groupBPosX;
+  int groupBPosY;
+  int groupBWidth;
+  int groupBHeight;
+
+
+  //Group B Blue boxes variables
+
+
 
 
 
@@ -58,17 +61,22 @@ class Group {
     groupCBluePosY = tempgroupY;
     groupCBlueWidth = 20;
     groupCBlueHeight = 40;
-    
-    //Group B White boxes variable 
-    
-    
-    //Group B Blue boxes variables 
-    
-    
+
+    //Group B White boxes variable
+    groupBPosX = tempgroupX;
+    groupBPosY = tempgroupY;
+    groupBWidth = 465;
+    groupBHeight = 40;
+
+
+
+    //Group B Blue boxes variables
   }
 
 
 
+
+  //Group A methods
 
   //Display method for group A white Boxes
   void displaygroupAWhiteBox() {
@@ -85,6 +93,9 @@ class Group {
   }
 
 
+
+  //Group C Methods
+
   //Display method for group C white boxes
   void displayGroupCWhiteBox() {
     //Draws the white boxes
@@ -99,4 +110,18 @@ class Group {
     fill(0, 255, 255);
     rect(groupCBluePosX, groupCBluePosY, groupCBlueWidth, groupCBlueHeight);
   }
+  
+  
+  
+//Group B methods
+
+//Display method for group B white boxes
+void displayGroupBWhiteBox() {
+  //Draws the white boxes
+  fill(255);
+  rect(groupBPosX, groupBPosY, groupBWidth, groupBHeight);
+}
+  
+  
+  
 }

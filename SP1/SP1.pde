@@ -14,28 +14,29 @@ Group[] groupBBlueBox = new Group[4];
 Group[] groupDWhiteBox = new Group[4];
 Group[] groupDBlueBox = new Group[4];
 
+//I have declared and initialized an array of object Country(For the flags),
+Country[] groupAFlags = new Country[4];
+
 
 //Variables for creating offset/space between the boxes of groupA
-int startY = 40;
-int boxHeight = 40;
-int spacing = 8;
+int startY = 80;
+int boxHeight = 80;
+int spacing = 16;
 
 //Variables for creating offset/space between the boxes of groupC
-int startYC = 40;
-int boxHeightC = 40;
-int spacingC = 8;
+int startYC = 80;
+int boxHeightC = 80;
+int spacingC = 16;
 
 //Variables for creating offset/space between the boxes of groupB
-int startYB = 300;
-int boxHeightB = 40;
-int spacingB = 8;
+int startYB = 600;
+int boxHeightB = 80;
+int spacingB = 16;
 
 //Variables for creating offset/space between the boxes of groupD
-int startYD = 300;
-int boxHeightD = 40;
-int spacingD = 8;
-
-
+int startYD = 600;
+int boxHeightD = 80;
+int spacingD = 16;
 
 
 //Fonts
@@ -48,7 +49,7 @@ PFont groupDText;
 
 void setup() {
   //size of canvas
-  size(1000, 500);
+  size(2000, 1000);
 
   //Method calling fontCreation()
   fontCreation();
@@ -64,6 +65,9 @@ void setup() {
 
   //Method calling groupDForLoopIndexStoring()
   groupDForLoopIndexStoring();
+
+  //Method calling storeFlagAInArray();
+  storeFlagAInArray();
 }
 
 
@@ -71,6 +75,7 @@ void setup() {
 void draw() {
   //background
   background(38, 56, 83);
+
 
   //I use pushStyle and popStyle here, so the stroke weight and stroke from the method does not affect the other stuff
   pushStyle();
@@ -96,6 +101,9 @@ void draw() {
 
   //Method calling displayGroupDBoxes
   displayGroupDBoxes();
+  
+  //Method calling displayFlagsA()
+  displayFlagsA();
 }
 
 
@@ -113,24 +121,24 @@ void fontCreation() {
 //Method that contains the code for displaying text
 void displayText() {
   //Group A
-  textFont(groupAText, 25);
+  textFont(groupAText, 50);
   fill(0, 255, 255);
-  text("GROUP A", 175, 30);
+  text("GROUP A", 350, 60);
 
   //Group C
-  textFont(groupCText, 25);
+  textFont(groupCText, 50);
   fill(0, 255, 255);
-  text("GROUP C", 675, 30);
+  text("GROUP C", 1350, 60);
 
   //Group B
-  textFont(groupBText, 25);
+  textFont(groupBText, 50);
   fill(255, 255, 0);
-  text("GROUP B", 175, 295);
+  text("GROUP B", 350, 590);
 
   //Group D
-  textFont(groupDText, 25);
+  textFont(groupDText, 50);
   fill(255, 255, 0);
-  text("GROUP D", 675, 295);
+  text("GROUP D", 1350, 590);
 }
 
 
@@ -142,7 +150,7 @@ void drawMiddleLine() {
   //Draws the middle white line
   strokeWeight(4);
   stroke(255);
-  line(500, 0, 500, 500);
+  line(1000, 0, 1000, 1000);
 }
 
 
@@ -154,7 +162,7 @@ void groupAForLoopIndexStoring() {
   for (int i = 0; i <groupABox.length; i++) {
     int y = startY + i * (boxHeight + spacing);
     groupABox[i] = new Group(0, y);
-    groupABlueBox[i] = new Group(465, y);
+    groupABlueBox[i] = new Group(930, y);
   }
 }
 
@@ -178,8 +186,8 @@ void groupCForLoopIndexStoring() {
   for (int i = 0; i < groupCWhiteBox.length; i++) {
     //A variable to be placed in y position, "startYC" the starting position of y, "boxHeightC" the height of the box, "spacingC" the space we want between the boxes
     int y = startYC + i * (boxHeightC + spacingC);
-    groupCWhiteBox[i] = new Group(510, y);
-    groupCBlueBox[i] = new Group(975, y);
+    groupCWhiteBox[i] = new Group(1010, y);
+    groupCBlueBox[i] = new Group(1950, y);
   }
 }
 
@@ -201,7 +209,7 @@ void groupBForLoopIndexStoring() {
   for (int i = 0; i < groupBWhiteBox.length; i++) {
     int y = startYB + i * (boxHeightB + spacingB);
     groupBWhiteBox[i] = new Group(0, y);
-    groupBBlueBox[i] = new Group(465, y);
+    groupBBlueBox[i] = new Group(930, y);
   }
 }
 
@@ -221,8 +229,8 @@ void displayGroupBBoxes() {
 void groupDForLoopIndexStoring() {
   for (int i = 0; i < groupDWhiteBox.length; i++) {
     int y = startYD + i * (boxHeightD + spacingD);
-    groupDWhiteBox[i] = new Group(510, y);
-    groupDBlueBox[i] = new Group(975, y);
+    groupDWhiteBox[i] = new Group(1010, y);
+    groupDBlueBox[i] = new Group(1950, y);
   }
 }
 
@@ -232,4 +240,22 @@ void displayGroupDBoxes() {
     groupDWhiteBox[i].displayGroupDWhiteBox();
     groupDBlueBox[i].displayGroupDBlueBox();
   }
+}
+
+
+//Method for Group A Flags
+
+//Method to store the flags in the array groupAFlags
+void storeFlagAInArray() {
+  PImage russiaImage = loadImage("Russia.png");
+  groupAFlags[0] = new Country(russiaImage, 0, 42, 80, 38);
+  PImage saudiImage = loadImage("SaudiArabia.png");
+  groupAFlags[1] = new Country(saudiImage, 0, 89, 80, 39);
+  
+}
+
+//Method to display the flags storred in array groupAFlags
+void displayFlagsA() {
+  groupAFlags[0].displayFlagsGroupA();
+  groupAFlags[1].displayFlagsGroupA();
 }

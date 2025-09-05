@@ -54,46 +54,46 @@ class Group {
     //group A white boxes
     groupAPosX = tempgroupX;
     groupAPosY = tempgroupY;
-    groupAWidth = 465;
-    groupAHeight = 40;
+    groupAWidth = 930;
+    groupAHeight = 80;
     //group a Blue boxes
-    groupABluePosX = 465 ;
+    groupABluePosX = 930 ;
     groupABluePosY = tempgroupY;
-    groupABlueWidth = 20;
-    groupABlueHeight = 40;
+    groupABlueWidth = 40;
+    groupABlueHeight = 80;
 
     //Gorup C white boxes
     groupCPosX = tempgroupX;
     groupAPosY = tempgroupY;
-    groupAWidth = 465;
-    groupAHeight = 40;
+    groupAWidth = 930;
+    groupAHeight = 80;
     //Group C blue boxes
-    groupCBluePosX = 975;
+    groupCBluePosX = 1950;
     groupCBluePosY = tempgroupY;
-    groupCBlueWidth = 20;
-    groupCBlueHeight = 40;
+    groupCBlueWidth = 40;
+    groupCBlueHeight = 80;
 
     //Group B White boxes variable
     groupBPosX = tempgroupX;
     groupBPosY = tempgroupY;
-    groupBWidth = 465;
-    groupBHeight = 40;
+    groupBWidth = 930;
+    groupBHeight = 80;
     //Group B Blue boxes variables
-    groupBBluePosX = 465;
+    groupBBluePosX = 930;
     groupBBluePosY = tempgroupY;
-    groupBBlueWidth = 20;
-    groupBBlueHeight = 40;
+    groupBBlueWidth = 40;
+    groupBBlueHeight = 80;
 
     //Group D White boxes variables
     groupDPosX = tempgroupX;
     groupDPosY = tempgroupY;
-    groupDWidth = 465;
-    groupDHeight = 40;
+    groupDWidth = 930;
+    groupDHeight = 80;
     //Group D Blue boxes variables
-    groupDBluePosX = 975;
+    groupDBluePosX = 1950;
     groupDBluePosY = tempgroupY;
-    groupDBlueWidth = 20;
-    groupDBlueHeight = 40;
+    groupDBlueWidth = 40;
+    groupDBlueHeight = 80;
     
     
   }

@@ -21,6 +21,8 @@ Country[] groupAFlags = new Country[4];
 Country[] groupBFlags = new Country[4];
 //Group C Flag Array
 Country[] groupCFlags = new Country[4];
+//Group D Flag Array
+Country[] groupDFlags = new Country[4];
 
 
 //Variables for creating offset/space between the boxes of groupA
@@ -76,9 +78,12 @@ void setup() {
 
   //Method calling storeFlagBInArray()
   storeFlagBInArray();
-  
+
   //Method calling storeFlagCInArray()
   storeFlagCInArray();
+
+  //storeFlagDInArray()
+  storeFlagDInArray();
 }
 
 
@@ -118,9 +123,12 @@ void draw() {
 
   //Method calling displayFlagsB()
   displayFlagsB();
-  
+
   //Method calling displayFlagsC()
   displayFlagsC();
+  
+  //Method calling displayFlagsD()
+  displayFlagsD();
 }
 
 
@@ -296,7 +304,6 @@ void storeFlagBInArray() {
   groupBFlags[2] = new Country(moroccoImage, 0, 790, 200, 83);
   PImage iranImage = loadImage("Iran.png");
   groupBFlags[3] = new Country(iranImage, 0, 885, 200, 83);
-  
 }
 
 //Method to display the flags storred in array groupBFlags
@@ -312,21 +319,44 @@ void displayFlagsB() {
 
 //Method to store the flags in the array groupCFlags
 void storeFlagCInArray() {
-PImage franceImage = loadImage("France.png");
-groupCFlags[0] = new Country(franceImage, 1010, 80 ,200, 83);
-PImage australiaImage = loadImage("Australia.png");
-groupCFlags[1] = new Country(australiaImage, 1010, 175, 200, 83);
-PImage peruImage = loadImage("Peru.png");
-groupCFlags[2] = new Country(peruImage, 1010, 272, 200, 83);
-PImage denmarkImage = loadImage("Denmark.png");
-groupCFlags[3] = new Country(denmarkImage, 1010, 367, 200, 83);
-
+  PImage franceImage = loadImage("France.png");
+  groupCFlags[0] = new Country(franceImage, 1010, 80, 200, 83);
+  PImage australiaImage = loadImage("Australia.png");
+  groupCFlags[1] = new Country(australiaImage, 1010, 175, 200, 83);
+  PImage peruImage = loadImage("Peru.png");
+  groupCFlags[2] = new Country(peruImage, 1010, 272, 200, 83);
+  PImage denmarkImage = loadImage("Denmark.png");
+  groupCFlags[3] = new Country(denmarkImage, 1010, 367, 200, 83);
 }
 
 //Method to display the flags storred in array groupCFlags
-void displayFlagsC(){
-groupCFlags[0].displayFlagsGroupC();
-groupCFlags[1].displayFlagsGroupC();
-groupCFlags[2].displayFlagsGroupC();
-groupCFlags[3].displayFlagsGroupC();
+void displayFlagsC() {
+  groupCFlags[0].displayFlagsGroupC();
+  groupCFlags[1].displayFlagsGroupC();
+  groupCFlags[2].displayFlagsGroupC();
+  groupCFlags[3].displayFlagsGroupC();
+}
+
+
+//Method for Group D Flags
+
+//Method to store the flags in the array groupDFlags
+void storeFlagDInArray() {
+  PImage argentinaImage = loadImage("Argentina.png");
+  groupDFlags[0] = new Country(argentinaImage, 1010, 600, 200, 83);
+  PImage icelandImage = loadImage("Iceland.png");
+  groupDFlags[1] = new Country(icelandImage, 1010, 695, 200, 83);
+  PImage croatiaImage = loadImage("Croatia.png");
+  groupDFlags[2] = new Country(croatiaImage, 1010, 790, 200, 83);
+  PImage nigeriaImage = loadImage("Nigeria.png");
+  groupDFlags[3] = new Country(nigeriaImage, 1010, 885, 200, 83);
+}
+
+//Method to display the flags storred in array groupDFlags
+void displayFlagsD(){
+groupDFlags[0].displayFlagsGroupD();
+groupDFlags[1].displayFlagsGroupD();
+groupDFlags[2].displayFlagsGroupD();
+groupDFlags[3].displayFlagsGroupD();
+
 }

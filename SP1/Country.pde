@@ -1,6 +1,6 @@
 class Country {
 
-  //Country Class variables
+  //Country Class Flag variables
 
   //Group A Flag variables
   int groupAFlagPosX;
@@ -30,8 +30,7 @@ class Country {
   int groupDFlagHeight;
   PImage flagNameD;
 
-
-  //Class constructor
+  //Class constructor for flags
   Country(PImage tempFlagName, int tempGroupFlagPosX, int tempGroupFlagPosY, int tempGroupFlagWidth, int tempGroupFlagHeight ) {
     //Flag Group A
     flagNameA = tempFlagName;
@@ -65,6 +64,8 @@ class Country {
 
 
 
+
+
   //Method that contains the code to displaying Group A flag
   void displayFlagsGroupA() {
     image(flagNameA, groupAFlagPosX, groupAFlagPosY, groupAFlagWidth, groupAFlagHeight);
@@ -80,14 +81,9 @@ class Country {
   void displayFlagsGroupC() {
     image(flagNameC, groupCFlagPosX, groupCFlagPosY, groupCFlagWidth, groupCFlagHeight);
   }
-  
-    //Method that contains the code to displaying Group C flag
+
+  //Method that contains the code to displaying Group C flag
   void displayFlagsGroupD() {
     image(flagNameD, groupDFlagPosX, groupDFlagPosY, groupDFlagWidth, groupDFlagHeight);
   }
-  
-  
-  
-  
-  
 }

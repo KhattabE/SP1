@@ -24,6 +24,10 @@ Country[] groupCFlags = new Country[4];
 //Group D Flag Array
 Country[] groupDFlags = new Country[4];
 
+//String array for Group A names
+String[] countryNamesGroupA = {"RUSSIA", "SAUDI ARABIA", "EGYPT", "URUGUAY"};
+
+
 
 //Variables for creating offset/space between the boxes of groupA
 int startY = 80;
@@ -84,6 +88,8 @@ void setup() {
 
   //storeFlagDInArray()
   storeFlagDInArray();
+  
+  
 }
 
 
@@ -126,9 +132,12 @@ void draw() {
 
   //Method calling displayFlagsC()
   displayFlagsC();
-  
+
   //Method calling displayFlagsD()
   displayFlagsD();
+  
+  //Method calling displayCountryName()
+  displayCountryName();
 }
 
 
@@ -146,24 +155,24 @@ void fontCreation() {
 //Method that contains the code for displaying text
 void displayText() {
   //Group A
-  textFont(groupAText, 70);
+  textFont(groupAText, 50);
   fill(0, 255, 255);
-  text("GROUP A", 325, 60);
+  text("GROUP A", 375, 60);
 
   //Group C
-  textFont(groupCText, 70);
+  textFont(groupCText, 50);
   fill(0, 255, 255);
-  text("GROUP C", 1325, 60);
+  text("GROUP C", 1375, 60);
 
   //Group B
-  textFont(groupBText, 70);
+  textFont(groupBText, 50);
   fill(255, 255, 0);
-  text("GROUP B", 325, 590);
+  text("GROUP B", 375, 590);
 
   //Group D
-  textFont(groupDText, 70);
+  textFont(groupDText, 50);
   fill(255, 255, 0);
-  text("GROUP D", 1325, 590);
+  text("GROUP D", 1375, 590);
 }
 
 
@@ -353,10 +362,22 @@ void storeFlagDInArray() {
 }
 
 //Method to display the flags storred in array groupDFlags
-void displayFlagsD(){
-groupDFlags[0].displayFlagsGroupD();
-groupDFlags[1].displayFlagsGroupD();
-groupDFlags[2].displayFlagsGroupD();
-groupDFlags[3].displayFlagsGroupD();
+void displayFlagsD() {
+  groupDFlags[0].displayFlagsGroupD();
+  groupDFlags[1].displayFlagsGroupD();
+  groupDFlags[2].displayFlagsGroupD();
+  groupDFlags[3].displayFlagsGroupD();
+}
 
+//Method that contains code to display the country names
+
+//Method to display country names
+void displayCountryName() {
+  //Group A Names
+  textSize(60);
+  fill(0);
+  text(countryNamesGroupA[0], 250, 140);
+  text(countryNamesGroupA[1], 250, 240);
+  text(countryNamesGroupA[2], 250, 335);
+  text(countryNamesGroupA[3], 250, 435);
 }

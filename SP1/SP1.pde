@@ -15,7 +15,9 @@ Group[] groupDWhiteBox = new Group[4];
 Group[] groupDBlueBox = new Group[4];
 
 //I have declared and initialized an array of object Country(For the flags),
+//Group A Flag Array
 Country[] groupAFlags = new Country[4];
+//
 
 
 //Variables for creating offset/space between the boxes of groupA
@@ -251,6 +253,10 @@ void storeFlagAInArray() {
   groupAFlags[0] = new Country(russiaImage, 0, 80, 200, 80);
   PImage saudiImage = loadImage("SaudiArabia.png");
   groupAFlags[1] = new Country(saudiImage, 0, 175, 200, 85);
+  PImage egyptImage = loadImage("Egypt.png");
+  groupAFlags[2] = new Country(egyptImage, 0, 272, 200, 83);
+  PImage uruguayImage = loadImage("Uruguay.png");
+  groupAFlags[3] = new Country(uruguayImage, 0, 367, 200, 83 );
   
 }
 
@@ -258,4 +264,6 @@ void storeFlagAInArray() {
 void displayFlagsA() {
   groupAFlags[0].displayFlagsGroupA();
   groupAFlags[1].displayFlagsGroupA();
+  groupAFlags[2].displayFlagsGroupA();
+  groupAFlags[3].displayFlagsGroupA();
 }

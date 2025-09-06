@@ -17,7 +17,10 @@ Group[] groupDBlueBox = new Group[4];
 //I have declared and initialized an array of object Country(For the flags),
 //Group A Flag Array
 Country[] groupAFlags = new Country[4];
-//
+//Group B Flag Array
+Country[] groupBFlags = new Country[4];
+//Group C Flag Array
+
 
 
 //Variables for creating offset/space between the boxes of groupA
@@ -68,8 +71,11 @@ void setup() {
   //Method calling groupDForLoopIndexStoring()
   groupDForLoopIndexStoring();
 
-  //Method calling storeFlagAInArray();
+  //Method calling storeFlagAInArray()
   storeFlagAInArray();
+
+  //Method calling storeFlagBInArray()
+  storeFlagBInArray();
 }
 
 
@@ -103,9 +109,12 @@ void draw() {
 
   //Method calling displayGroupDBoxes
   displayGroupDBoxes();
-  
+
   //Method calling displayFlagsA()
   displayFlagsA();
+
+  //Method calling displayFlagsB()
+  displayFlagsB();
 }
 
 
@@ -245,6 +254,7 @@ void displayGroupDBoxes() {
 }
 
 
+
 //Method for Group A Flags
 
 //Method to store the flags in the array groupAFlags
@@ -257,7 +267,6 @@ void storeFlagAInArray() {
   groupAFlags[2] = new Country(egyptImage, 0, 272, 200, 83);
   PImage uruguayImage = loadImage("Uruguay.png");
   groupAFlags[3] = new Country(uruguayImage, 0, 367, 200, 83 );
-  
 }
 
 //Method to display the flags storred in array groupAFlags
@@ -267,3 +276,30 @@ void displayFlagsA() {
   groupAFlags[2].displayFlagsGroupA();
   groupAFlags[3].displayFlagsGroupA();
 }
+
+
+//Method for Group B Flags
+
+//Method to store the flags in the array groupBFlags
+void storeFlagBInArray() {
+  PImage portugalImage = loadImage("Portugal.png");
+  groupBFlags[0] = new Country(portugalImage, 0, 600, 200, 83);
+  PImage spainImage = loadImage("Spain.png");
+  groupBFlags[1] = new Country(spainImage, 0, 695, 200, 83);
+  PImage moroccoImage = loadImage("Morocco.png");
+  groupBFlags[2] = new Country(moroccoImage, 0, 790, 200, 83);
+  PImage iranImage = loadImage("Iran.png");
+  groupBFlags[3] = new Country(iranImage, 0, 885, 200, 83);
+  
+}
+
+//Method to display the flags storred in array groupBFlags
+void displayFlagsB() {
+  groupBFlags[0].displayFlagsGroupB();
+  groupBFlags[1].displayFlagsGroupB();
+  groupBFlags[2].displayFlagsGroupB();
+  groupBFlags[3].displayFlagsGroupB();
+}
+
+
+//Method for Group C Flags

@@ -20,7 +20,7 @@ Country[] groupAFlags = new Country[4];
 //Group B Flag Array
 Country[] groupBFlags = new Country[4];
 //Group C Flag Array
-
+Country[] groupCFlags = new Country[4];
 
 
 //Variables for creating offset/space between the boxes of groupA
@@ -76,6 +76,9 @@ void setup() {
 
   //Method calling storeFlagBInArray()
   storeFlagBInArray();
+  
+  //Method calling storeFlagCInArray()
+  storeFlagCInArray();
 }
 
 
@@ -115,6 +118,9 @@ void draw() {
 
   //Method calling displayFlagsB()
   displayFlagsB();
+  
+  //Method calling displayFlagsC()
+  displayFlagsC();
 }
 
 
@@ -303,3 +309,24 @@ void displayFlagsB() {
 
 
 //Method for Group C Flags
+
+//Method to store the flags in the array groupCFlags
+void storeFlagCInArray() {
+PImage franceImage = loadImage("France.png");
+groupCFlags[0] = new Country(franceImage, 1010, 80 ,200, 83);
+PImage australiaImage = loadImage("Australia.png");
+groupCFlags[1] = new Country(australiaImage, 1010, 175, 200, 83);
+PImage peruImage = loadImage("Peru.png");
+groupCFlags[2] = new Country(peruImage, 1010, 272, 200, 83);
+PImage denmarkImage = loadImage("Denmark.png");
+groupCFlags[3] = new Country(denmarkImage, 1010, 367, 200, 83);
+
+}
+
+//Method to display the flags storred in array groupCFlags
+void displayFlagsC(){
+groupCFlags[0].displayFlagsGroupC();
+groupCFlags[1].displayFlagsGroupC();
+groupCFlags[2].displayFlagsGroupC();
+groupCFlags[3].displayFlagsGroupC();
+}

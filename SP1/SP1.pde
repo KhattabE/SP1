@@ -26,8 +26,8 @@ Country[] groupDFlags = new Country[4];
 
 //String array for Group A names
 String[] countryNamesGroupA = {"RUSSIA", "SAUDI ARABIA", "EGYPT", "URUGUAY"};
-
-
+//String array for Group B names
+String[] countryNamesGroupB = {"PORTUGAL", "SPAIN", "MOROCCO", "IRAN"};
 
 //Variables for creating offset/space between the boxes of groupA
 int startY = 80;
@@ -155,24 +155,24 @@ void fontCreation() {
 //Method that contains the code for displaying text
 void displayText() {
   //Group A
-  textFont(groupAText, 50);
+  textFont(groupAText, 70);
   fill(0, 255, 255);
-  text("GROUP A", 375, 60);
+  text("GROUP A", 325, 60);
 
   //Group C
-  textFont(groupCText, 50);
+  textFont(groupCText, 70);
   fill(0, 255, 255);
-  text("GROUP C", 1375, 60);
+  text("GROUP C", 1325, 60);
 
   //Group B
-  textFont(groupBText, 50);
+  textFont(groupBText, 70);
   fill(255, 255, 0);
-  text("GROUP B", 375, 590);
+  text("GROUP B", 325, 580);
 
   //Group D
-  textFont(groupDText, 50);
+  textFont(groupDText, 70);
   fill(255, 255, 0);
-  text("GROUP D", 1375, 590);
+  text("GROUP D", 1325, 580);
 }
 
 
@@ -380,4 +380,10 @@ void displayCountryName() {
   text(countryNamesGroupA[1], 250, 240);
   text(countryNamesGroupA[2], 250, 335);
   text(countryNamesGroupA[3], 250, 435);
+  
+  //Group B Names
+  text(countryNamesGroupB[0], 250, 665);
+  text(countryNamesGroupB[1], 250, 760);
+  text(countryNamesGroupB[2], 250, 855);
+  text(countryNamesGroupB[3], 250, 950);
 }
